@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/login/index",
+    "pages/list/index",
+    "pages/index/index",
+    "pages/view/view",
+    "pages/info/add",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e53f27",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

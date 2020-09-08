@@ -1,0 +1,18 @@
+<view class="containes">
+  <view class="xiangqing" wx:for="{{list}}">
+    <view class='xiangqing_info' catchtap="ontp" data-id="{{item.mapId}}">
+      <view class="icon">
+        <image style="width:50px;height:50px" src="../../img/clock.png"></image>
+      </view>
+      <view class="name">
+        <view decode="{{true}}">仓库名称：{{item.mapWn}}</view>
+        <text class="tmDate" decode="{{true}}">预约日期：{{item.mapDate}}</text>
+      </view>
+      <view class="num">
+        月台编号：{{item.platformNo}}
+      </view>
+
+    </view>
+  </view>
+  <button class="addv" bindtap="addMi">新增预约</button>
+</view>

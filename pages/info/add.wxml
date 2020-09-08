@@ -1,0 +1,101 @@
+<view class="add-container"> 
+  <view class="row-wrap" style="margin-top:20px">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约仓库</view>
+      <picker class="lines" bindchange="bindCkPickerChange" value="{{ckIndex}}" range="{{ckArray}}">
+        <view>
+        <input type="text" class="ilc" value="{{ckArray[ckIndex]}}"></input>
+        </view>
+      
+      </picker>
+      <image  class="form-icon" src="../../img/nav-arrow-right.png"></image>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约月台</view>
+      <picker class="lines" bindchange="bindYtPickerChange" value="{{ytIndex}}" range="{{ytArray}}">
+        <view style="display:flex;align-items: center;">
+        <input type="text" class="ilc" value="{{ytArray[ytIndex]}}"></input>
+        </view>
+      </picker>
+      <image  class="form-icon" src="../../img/nav-arrow-right.png"></image>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/name.png"></image>
+      <view class="label">司机姓名</view>
+      <view class="lines">
+          <input type="text" class="ilc" name="userName" value="{{userName}}"></input>
+      </view>
+      
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/name.png"></image>
+      <view class="label">手机号码</view>
+      <view class="lines">
+       <input type="text" class="ilc" name="phone"  value="{{phoneNo}}"></input>
+       </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/name.png"></image>
+      <view class="label">车牌号码</view>
+      <view class="lines">
+        <input type="text" class="ilc" name="lpNo" value="{{lpNo}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/name.png"></image>
+      <view class="label">送货单号</view>
+      <view class="lines">
+        <input type="text" class="ilc" bindinput='getwaybillNoValue' name="waybillNo" value=""></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/name.png"></image>
+      <view class="label">送货箱数</view>
+      <view class="lines">
+       <input type="text" class="ilc" name="boxesNumber" bindinput='getboxesNumberValue' value=""></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约日期</view>
+      <picker class="lines"  mode="date" value="2020-09-08" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker"> 2020-09-08</view>
+      </picker>
+      <image  class="form-icon" src="../../img/nav-arrow-right.png"></image>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约时间</view>
+      <picker class="lines"  mode="time" value="10:20" start="00:00" end="24:00" bindchange="bindDateChange">
+        <view class="picker"> 10:20</view>
+      </picker>
+      <image  class="form-icon" src="../../img/nav-arrow-right.png"></image>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap-c">
+    
+  </view>
+  <view class="dateTime-wrap">
+    <view class="data-bk" wx:for="{{cdataList}}" wx:for-index="index">
+      <view class="{{index == isAble ? 'solidSytel':'lodSolidSytel'}}" bindtap="onDataPlClick" data-key="{{item.key}}" data-value="{{item.value}}" data-index="{{index}}">
+        <view class='dtc' wx:if="{{item.value == 0}}">{{item.key}}</view>
+        <view class='dtc' wx:if="{{item.value == 0}}">空闲</view>
+        <view class='dtc-r' wx:if="{{item.value == 1}}">{{item.key}}</view>
+        <view class='dtc-r' wx:if="{{item.value == 1}}">占用</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="row-wrap-c">
+    
+</view>
+<button class="addv" bindtap="onSubmitClick">提交预约</button>

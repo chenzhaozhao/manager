@@ -1,0 +1,76 @@
+<view class="add-container"> 
+  <view class="row-wrap"  style="margin-top:20px">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约仓库</view>
+      <view class="lines">
+          <input type="text" class="ilc" name="userName" value="{{ckName}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约月台</view>
+      <view class="lines">
+          <input type="text" class="ilc" name="userName" value="{{ytName}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">司机姓名</view>
+      <view class="lines">
+          <input type="text" class="ilc" name="userName" value="{{userName}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">手机号码</view>
+      <view class="lines">
+       <input type="text" class="ilc" name="phone"  value="{{phoneNo}}"></input>
+       </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">车牌号码</view>
+      <view class="lines">
+        <input type="text" class="ilc" name="lpNo" value="{{lpNo}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">送货单号</view>
+      <view class="lines">
+        <input type="text" class="ilc"  name="waybillNo" value="{{waybillNo}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">送货箱数</view>
+      <view class="lines">
+       <input type="text" class="ilc" name="boxesNumber"  value="{{boxesNumber}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约日期</view>
+      <view class="lines">
+       <input type="text" class="ilc" name="mapDate"  value="{{mapDate}}"></input>
+      </view>
+  </view>
+  <view class="line"></view>
+  <view class="row-wrap">
+    <image class="form-icon" src="../../img/warehouse.png"></image>
+      <view class="label">预约时间</view>
+      <view class="lines">
+       <input type="text" class="ilc" name="mapDatePlate"  value="{{mapDatePlate}}"></input>
+      </view>
+  </view>
+  <view class="row-wrap-c">
+    
+  </view>
+</view>
