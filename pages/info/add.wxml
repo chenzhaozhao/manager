@@ -66,8 +66,8 @@
   <view class="row-wrap">
     <image class="form-icon" src="../../img/warehouse.png"></image>
       <view class="label">预约日期</view>
-      <picker class="lines"  mode="date" value="2020-09-08" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-        <view class="picker"> 2020-09-08</view>
+      <picker class="lines"  mode="date" value="{{bookDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindBookDateChange">
+        <view class="picker">{{bookDate}}</view>
       </picker>
       <image  class="form-icon" src="../../img/nav-arrow-right.png"></image>
   </view>
@@ -75,7 +75,7 @@
   <view class="row-wrap">
     <image class="form-icon" src="../../img/warehouse.png"></image>
       <view class="label">预约时间</view>
-      <picker class="lines"  mode="time" value="10:20" start="00:00" end="24:00" bindchange="bindDateChange">
+      <picker class="lines"  mode="selector" range="{{timeArray}}" value="{{timeIndex}}" bindchange="bindDateChange">
         <view class="picker"> 10:20</view>
       </picker>
       <image  class="form-icon" src="../../img/nav-arrow-right.png"></image>

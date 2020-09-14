@@ -19,8 +19,8 @@ page{
   
  .login-img{ 
    /* margin-top: 140rpx; */
-  width:750rpx;
-  height:650rpx;
+  width:100vw;
+  height:60vh;
  } 
   
  /*表单内容*/

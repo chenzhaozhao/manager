@@ -11,7 +11,7 @@ Page({
     isAble:-1,
     miData:'',
     boxesNumber:'',
-    mapDatePlate:'',
+    mapDatePlate:new Date().getMinutes(),
     waybillNo:'',
     userName:'',
     mapDate: ''

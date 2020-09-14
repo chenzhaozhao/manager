@@ -7,6 +7,8 @@ Page({
     cdataList:null,
     list: null,
     ckArray: ['请选择', '青村总仓', '集库仓', 'RDC仓'],
+    timeArray:['01:00-02:00','02:00-03:00'],
+    timeIndex:0,
     ytArray: [],
     ckIndex: 0,
     ytIndex: 0,
@@ -19,7 +21,8 @@ Page({
     miData:'',
     boxesNumber:'',
     mapDatePlate:'',
-    waybillNo:''
+    waybillNo:'',
+    bookDate:'2020-09-09'
   },
 
   onSubmitClick: function(e){
@@ -45,9 +48,17 @@ Page({
         method: 'post',
         success: res => {
           console.log(res.data)
-          wx.navigateTo({
-            url: '../view/view?id=' + res.data.data.mapId
-          })
+          if(res.data.data && res.data.data.mapId){
+            wx.navigateTo({
+              url: '../view/view?id=' + res.data.data.mapId
+            })
+          }else{
+            wx.showToast({  
+              title:res.data.msg,  
+              icon: 'none',  
+              duration: 2000  
+            }) 
+          }
          }
         });
     }else{
@@ -69,7 +80,10 @@ Page({
       boxesNumber: e.detail.value
     })
   },
-
+  bindBookDateChange:function(e){
+    console.log(e)
+    this.setData({bookDate:e.detail.value})
+  },
   onDataPlClick: function(options) {
     var key = options.currentTarget.dataset.key;
     var value = options.currentTarget.dataset.value;
